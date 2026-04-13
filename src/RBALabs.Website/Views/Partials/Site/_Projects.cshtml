@@ -1,17 +1,30 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
-  var title = Model.Value<string>("projectsTitle") ?? "Featured Projects";
+  var kicker = Model.Value<string>("projectsKicker") ?? "Featured Projects";
+  var titleCandidate = Model.Value<string>("projectsTitle");
+  var title = string.IsNullOrWhiteSpace(titleCandidate) || titleCandidate.Trim().Equals("Featured Projects", StringComparison.OrdinalIgnoreCase)
+    ? "Work we're proud of"
+    : titleCandidate;
 
   var project1Title = Model.Value<string>("project1Title") ?? "IMMO / DKV";
   var project1Text = Model.Value<string>("project1Text") ?? "Enterprise-grade real estate platform with structured content, multilingual workflows, and API integrations.";
+  var project1Meta = Model.Value<string>("project1Meta") ?? "Real Estate - Umbraco";
+  var project1Url = Model.Value<string>("project1Url") ?? "#contact";
   var project2Title = Model.Value<string>("project2Title") ?? "Ronson";
   var project2Text = Model.Value<string>("project2Text") ?? "High-performance content platform with optimized editorial UX and scalable infrastructure setup.";
+  var project2Meta = Model.Value<string>("project2Meta") ?? "MedTech - .NET";
+  var project2Url = Model.Value<string>("project2Url") ?? "#contact";
   var project3Title = Model.Value<string>("project3Title") ?? "GameDriver";
   var project3Text = Model.Value<string>("project3Text") ?? "Integration-heavy ecosystem focused on automation workflows, data exchange, and stable release cadence.";
+  var project3Meta = Model.Value<string>("project3Meta") ?? "GameTech - Platform";
+  var project3Url = Model.Value<string>("project3Url") ?? "#contact";
 }
 <section class="section" id="projects" data-reveal>
-  <div class="section-head">
-    <h2>@title</h2>
+  <div class="section-head projects-head">
+    <div>
+      <span class="section-kicker">@kicker</span>
+      <h2>@title</h2>
+    </div>
     <a class="link-arrow" href="#contact">View all -></a>
   </div>
 
@@ -19,8 +32,12 @@
     <article class="project-card" data-reveal>
       <div class="project-image">
         <img src="/prototype/assets/images/project-dev-monitors.jpg" alt="Dual monitor development setup" />
+        <div class="project-overlay">
+          <a class="project-overlay-btn" href="@project1Url">View Case Study</a>
+        </div>
       </div>
       <div class="project-body">
+        <p class="project-meta">@project1Meta</p>
         <h3>@project1Title</h3>
         <p>@project1Text</p>
       </div>
@@ -29,8 +46,12 @@
     <article class="project-card" data-reveal>
       <div class="project-image">
         <img src="/prototype/assets/images/project-dev-desk.jpg" alt="Developer desk and monitor workspace" />
+        <div class="project-overlay">
+          <a class="project-overlay-btn" href="@project2Url">View Case Study</a>
+        </div>
       </div>
       <div class="project-body">
+        <p class="project-meta">@project2Meta</p>
         <h3>@project2Title</h3>
         <p>@project2Text</p>
       </div>
@@ -39,8 +60,12 @@
     <article class="project-card" data-reveal>
       <div class="project-image">
         <img src="/prototype/assets/images/project-digital-grid.jpg" alt="Abstract red futuristic digital grid" />
+        <div class="project-overlay">
+          <a class="project-overlay-btn" href="@project3Url">View Case Study</a>
+        </div>
       </div>
       <div class="project-body">
+        <p class="project-meta">@project3Meta</p>
         <h3>@project3Title</h3>
         <p>@project3Text</p>
       </div>

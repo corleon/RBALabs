@@ -1,10 +1,10 @@
-# Image Sources (Pexels)
+# Image Sources
 
-All images were downloaded from `images.pexels.com` endpoints and are intended as prototype placeholders.
+Images are used as prototype placeholders.
 
 ## Used in HTML
 
-- Hero background: `hero-umbraco-dev.jpg` (client-provided reference image)
+- Hero background: `hero-cubes-reference.png` (cropped from local design mockup `c:/Users/User/Downloads/Screenshot_129.png`)
 - Secondary abstract: https://images.pexels.com/photos/34472014/pexels-photo-34472014.jpeg
 - Project card 1: https://images.pexels.com/photos/16129703/pexels-photo-16129703.jpeg
 - Project card 2: https://images.pexels.com/photos/18935831/pexels-photo-18935831.jpeg
