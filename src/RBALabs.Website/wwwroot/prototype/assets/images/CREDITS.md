@@ -4,7 +4,7 @@ All images were downloaded from `images.pexels.com` endpoints and are intended a
 
 ## Used in HTML
 
-- Hero background: https://images.pexels.com/photos/12977019/pexels-photo-12977019.jpeg
+- Hero background: `hero-umbraco-dev.jpg` (client-provided reference image)
 - Secondary abstract: https://images.pexels.com/photos/34472014/pexels-photo-34472014.jpeg
 - Project card 1: https://images.pexels.com/photos/16129703/pexels-photo-16129703.jpeg
 - Project card 2: https://images.pexels.com/photos/18935831/pexels-photo-18935831.jpeg
