@@ -1,0 +1,97 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+  var heroKicker = Model.Value<string>("heroKicker") ?? "Senior Umbraco and .NET experts";
+  var heroHeadingPrefix = Model.Value<string>("heroHeadingPrefix") ?? "Senior .NET and";
+  var heroHeadingAccent = Model.Value<string>("heroHeadingAccent") ?? "Umbraco engineering";
+  var heroHeadingSuffix = Model.Value<string>("heroHeadingSuffix") ?? "for complex web platforms";
+  var heroLead = Model.Value<string>("heroLead") ?? "We build integration-heavy digital systems for agencies, enterprise teams, and product companies that need reliable senior-level delivery.";
+
+  var primaryText = Model.Value<string>("heroPrimaryButtonText") ?? "Get in Touch";
+  var primaryUrl = Model.Value<string>("heroPrimaryButtonUrl") ?? "#contact";
+  var secondaryText = Model.Value<string>("heroSecondaryButtonText") ?? "View Projects";
+  var secondaryUrl = Model.Value<string>("heroSecondaryButtonUrl") ?? "#projects";
+
+  var metric1Value = Model.Value<string>("heroMetric1Value") ?? "15+";
+  var metric1Text = Model.Value<string>("heroMetric1Text") ?? "Years in Umbraco and .NET delivery";
+  var metric2Value = Model.Value<string>("heroMetric2Value") ?? "80+";
+  var metric2Text = Model.Value<string>("heroMetric2Text") ?? "Projects across multiple markets";
+  var metric3Value = Model.Value<string>("heroMetric3Value") ?? "24/7";
+  var metric3Text = Model.Value<string>("heroMetric3Text") ?? "Operational support and performance care";
+}
+<section class="hero" id="about" data-reveal>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <div class="kicker">@heroKicker</div>
+      <h1>@heroHeadingPrefix <span class="accent">@heroHeadingAccent</span> @heroHeadingSuffix</h1>
+      <p class="hero-lead">@heroLead</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="@primaryUrl">@primaryText</a>
+        <a class="btn btn-secondary" href="@secondaryUrl">@secondaryText</a>
+      </div>
+
+      <div class="hero-metrics">
+        <div class="hero-metric">
+          <strong>@metric1Value</strong>
+          <span>@metric1Text</span>
+        </div>
+        <div class="hero-metric">
+          <strong>@metric2Value</strong>
+          <span>@metric2Text</span>
+        </div>
+        <div class="hero-metric">
+          <strong>@metric3Value</strong>
+          <span>@metric3Text</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" id="heroVisual" aria-hidden="true">
+      <img class="hero-bg" id="heroBg" src="/prototype/assets/images/hero-cubes.jpg" alt="" />
+      <div class="hero-grid-lines"></div>
+      <div class="hero-cube" id="heroCube"></div>
+      <span class="hero-dot d1"></span>
+      <span class="hero-dot d2"></span>
+      <span class="hero-dot d3"></span>
+      <span class="hero-dot d4"></span>
+    </div>
+  </div>
+
+  <div class="capability-strip">
+    <div class="cap">
+      <span class="cap-icon">U</span>
+      <div>
+        <strong>Umbraco</strong>
+        <span>CMS architecture</span>
+      </div>
+    </div>
+    <div class="cap">
+      <span class="cap-icon">.N</span>
+      <div>
+        <strong>.NET</strong>
+        <span>Core engineering</span>
+      </div>
+    </div>
+    <div class="cap">
+      <span class="cap-icon">API</span>
+      <div>
+        <strong>Integrations</strong>
+        <span>ERP, CRM, PIM, payments</span>
+      </div>
+    </div>
+    <div class="cap">
+      <span class="cap-icon">P</span>
+      <div>
+        <strong>Performance</strong>
+        <span>Scale and hardening</span>
+      </div>
+    </div>
+    <div class="cap">
+      <span class="cap-icon">S</span>
+      <div>
+        <strong>Support</strong>
+        <span>Monitoring and SLA</span>
+      </div>
+    </div>
+  </div>
+</section>

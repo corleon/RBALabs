@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+  Layout = "master.cshtml";
+}
+
+@await Html.PartialAsync("Partials/Site/_Header", Model)
+
+<main class="container">
+  @await Html.PartialAsync("Partials/Site/_Hero", Model)
+  @await Html.PartialAsync("Partials/Site/_Services", Model)
+  @await Html.PartialAsync("Partials/Site/_Projects", Model)
+  @await Html.PartialAsync("Partials/Site/_WhyChoose", Model)
+</main>
+
+@await Html.PartialAsync("Partials/Site/_Footer", Model)

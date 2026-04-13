@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/RBALabs.Website/RBALabs.Website.csproj" />
+  </Folder>
+</Solution>

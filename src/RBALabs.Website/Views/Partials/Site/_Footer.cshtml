@@ -1,0 +1,49 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+  var contactEmail = Model.Value<string>("contactEmail") ?? "hello@rbalabs.com";
+  var footerLead = Model.Value<string>("footerLead") ?? "Senior Umbraco and .NET engineering partner for teams shipping mission-critical digital products.";
+  var footerPhone = Model.Value<string>("footerPhone") ?? "+48 909 999 909";
+  var footerPhoneLink = Model.Value<string>("footerPhoneLink") ?? "+48909999909";
+  var footerLinkedInUrl = Model.Value<string>("footerLinkedInUrl") ?? "https://www.linkedin.com";
+}
+<footer class="footer container" data-reveal>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="/prototype/assets/logo/rba_logo_combined_transparent_for_dark_mid3.png" alt="RBA Labs" />
+      <p>@footerLead</p>
+    </div>
+
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Umbraco Development</a></li>
+        <li><a href="#services">.NET Engineering</a></li>
+        <li><a href="#services">Platform Modernization</a></li>
+        <li><a href="#services">Performance and Support</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="tel:@footerPhoneLink">@footerPhone</a></li>
+        <li><a href="mailto:@contactEmail">@contactEmail</a></li>
+        <li><a href="@footerLinkedInUrl" target="_blank" rel="noreferrer">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>2026 RBA Labs. All rights reserved.</span>
+    <span>Prototype built for design direction and front-end handoff.</span>
+  </div>
+</footer>

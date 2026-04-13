@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+  var navButtonText = Model.Value<string>("heroPrimaryButtonText") ?? "Get in Touch";
+}
+<header class="site-header">
+  <div class="container header-shell" id="headerShell" data-reveal>
+    <div class="header-inner">
+      <a class="brand" href="#" aria-label="RBA Labs home">
+        <img src="/prototype/assets/logo/rba_logo_combined_transparent_mid3.png" alt="RBA Labs" />
+      </a>
+
+      <nav class="nav" id="siteNav" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary" href="#contact">@navButtonText</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>

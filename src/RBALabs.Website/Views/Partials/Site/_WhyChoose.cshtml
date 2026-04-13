@@ -1,0 +1,52 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+  var trustTitle = Model.Value<string>("trustTitle") ?? "Why Clients Choose RBA Labs";
+
+  var stat1Value = Model.Value<string>("trustStat1Value") ?? "15+";
+  var stat1Label = Model.Value<string>("trustStat1Label") ?? "Years of services delivery";
+  var stat2Value = Model.Value<string>("trustStat2Value") ?? "80+";
+  var stat2Label = Model.Value<string>("trustStat2Label") ?? "Projects launched and supported";
+  var stat3Value = Model.Value<string>("trustStat3Value") ?? "100%";
+  var stat3Label = Model.Value<string>("trustStat3Label") ?? "Senior engineering ownership";
+  var stat4Value = Model.Value<string>("trustStat4Value") ?? "24/7";
+  var stat4Label = Model.Value<string>("trustStat4Label") ?? "Performance and support coverage";
+
+  var ctaTitle = Model.Value<string>("ctaTitle") ?? "Need a senior partner for your complex platform?";
+  var ctaText = Model.Value<string>("ctaText") ?? "Let us design, build, and scale it with you.";
+  var ctaButtonText = Model.Value<string>("ctaButtonText") ?? "Start a Project";
+  var ctaButtonUrl = Model.Value<string>("ctaButtonUrl") ?? "#contact";
+}
+<section class="section" data-reveal>
+  <div class="section-head">
+    <h2>@trustTitle</h2>
+  </div>
+
+  <div class="stats">
+    <div class="stat" data-reveal>
+      <strong>@stat1Value</strong>
+      <span>@stat1Label</span>
+    </div>
+    <div class="stat" data-reveal>
+      <strong>@stat2Value</strong>
+      <span>@stat2Label</span>
+    </div>
+    <div class="stat" data-reveal>
+      <strong>@stat3Value</strong>
+      <span>@stat3Label</span>
+    </div>
+    <div class="stat" data-reveal>
+      <strong>@stat4Value</strong>
+      <span>@stat4Label</span>
+    </div>
+  </div>
+
+  <div class="cta-banner" id="contact" data-reveal>
+    <div>
+      <h3>@ctaTitle</h3>
+      <p>@ctaText</p>
+    </div>
+    <div class="cta-action">
+      <a class="btn" href="@ctaButtonUrl">@ctaButtonText</a>
+    </div>
+  </div>
+</section>

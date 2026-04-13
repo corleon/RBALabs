@@ -1,0 +1,49 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+  var title = Model.Value<string>("projectsTitle") ?? "Featured Projects";
+
+  var project1Title = Model.Value<string>("project1Title") ?? "IMMO / DKV";
+  var project1Text = Model.Value<string>("project1Text") ?? "Enterprise-grade real estate platform with structured content, multilingual workflows, and API integrations.";
+  var project2Title = Model.Value<string>("project2Title") ?? "Ronson";
+  var project2Text = Model.Value<string>("project2Text") ?? "High-performance content platform with optimized editorial UX and scalable infrastructure setup.";
+  var project3Title = Model.Value<string>("project3Title") ?? "GameDriver";
+  var project3Text = Model.Value<string>("project3Text") ?? "Integration-heavy ecosystem focused on automation workflows, data exchange, and stable release cadence.";
+}
+<section class="section" id="projects" data-reveal>
+  <div class="section-head">
+    <h2>@title</h2>
+    <a class="link-arrow" href="#contact">View all -></a>
+  </div>
+
+  <div class="project-grid">
+    <article class="project-card" data-reveal>
+      <div class="project-image">
+        <img src="/prototype/assets/images/project-dev-monitors.jpg" alt="Dual monitor development setup" />
+      </div>
+      <div class="project-body">
+        <h3>@project1Title</h3>
+        <p>@project1Text</p>
+      </div>
+    </article>
+
+    <article class="project-card" data-reveal>
+      <div class="project-image">
+        <img src="/prototype/assets/images/project-dev-desk.jpg" alt="Developer desk and monitor workspace" />
+      </div>
+      <div class="project-body">
+        <h3>@project2Title</h3>
+        <p>@project2Text</p>
+      </div>
+    </article>
+
+    <article class="project-card" data-reveal>
+      <div class="project-image">
+        <img src="/prototype/assets/images/project-digital-grid.jpg" alt="Abstract red futuristic digital grid" />
+      </div>
+      <div class="project-body">
+        <h3>@project3Title</h3>
+        <p>@project3Text</p>
+      </div>
+    </article>
+  </div>
+</section>

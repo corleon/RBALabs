@@ -1,0 +1,48 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+  var title = Model.Value<string>("servicesTitle") ?? "What We Do";
+  var lead = Model.Value<string>("servicesLead") ?? "From platform strategy to delivery and support, we cover the full lifecycle of enterprise Umbraco and .NET systems.";
+
+  var service1Title = Model.Value<string>("service1Title") ?? "Umbraco Development";
+  var service1Text = Model.Value<string>("service1Text") ?? "Custom Umbraco builds with clean content architecture, editor-friendly backoffice setup, and strong long-term maintainability.";
+  var service2Title = Model.Value<string>("service2Title") ?? ".NET Backend and APIs";
+  var service2Text = Model.Value<string>("service2Text") ?? "Robust backend services, event-driven workflows, and API-first integrations designed for performance and resilience.";
+  var service3Title = Model.Value<string>("service3Title") ?? "Platform Modernization";
+  var service3Text = Model.Value<string>("service3Text") ?? "Incremental upgrades from legacy stacks to modern architecture with lower risk and clear migration roadmaps.";
+  var service4Title = Model.Value<string>("service4Title") ?? "Performance and Support";
+  var service4Text = Model.Value<string>("service4Text") ?? "Core Web Vitals optimization, infrastructure tuning, release support, and stable operations for high-load products.";
+}
+<section class="section" id="services" data-reveal>
+  <div class="section-head">
+    <div>
+      <h2>@title</h2>
+      <p class="muted">@lead</p>
+    </div>
+  </div>
+
+  <div class="service-grid">
+    <article class="service-card" data-reveal>
+      <span class="cap-icon">U</span>
+      <h3>@service1Title</h3>
+      <p>@service1Text</p>
+    </article>
+
+    <article class="service-card" data-reveal>
+      <span class="cap-icon">.N</span>
+      <h3>@service2Title</h3>
+      <p>@service2Text</p>
+    </article>
+
+    <article class="service-card" data-reveal>
+      <span class="cap-icon">M</span>
+      <h3>@service3Title</h3>
+      <p>@service3Text</p>
+    </article>
+
+    <article class="service-card" data-reveal>
+      <span class="cap-icon">R</span>
+      <h3>@service4Title</h3>
+      <p>@service4Text</p>
+    </article>
+  </div>
+</section>
